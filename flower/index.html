@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Valentine 🌹</title>
+
+<!-- Anime Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Bangers&family=Fredoka:wght@400;600&display=swap" rel="stylesheet">
+
+<style>
+/* 🌸 Animated Background */
+body {
+  margin: 0;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(-45deg, #ff9a9e, #fecfef, #ffe2e2, #ffd1ff);
+  background-size: 400% 400%;
+  animation: gradientBG 15s ease infinite;
+  font-family: 'Fredoka', sans-serif;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+@keyframes gradientBG {
+  0% {background-position:0% 50%;}
+  50% {background-position:100% 50%;}
+  100% {background-position:0% 50%;}
+}
+
+/* 🌹 Clickable Flower Image */
+.letter-emoji {
+  cursor: pointer;
+  z-index: 10;
+  position: relative;
+  display: inline-block;
+  transition: transform 0.3s;
+}
+
+.letter-img {
+  width: 120px;
+  height: auto;
+  animation: float 3s ease-in-out infinite;
+}
+
+.letter-emoji:hover {
+  transform: scale(1.3);
+}
+
+/* 🌸 Floating animation */
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-20px); }
+  100% { transform: translateY(0px); }
+}
+
+/* 💖 Popup */
+.popup {
+  position: fixed;
+  width: 500px;
+  max-width: 95%;
+  max-height: 90vh;
+  overflow-y: auto;
+  padding: 30px;
+  background: white;
+  border-radius: 25px;
+  text-align: center;
+  box-shadow: 0 0 40px rgba(255,77,109,0.7);
+  display: none;
+  animation: fadeIn 0.5s ease forwards, popupOpen 0.5s ease forwards;
+  z-index: 20;
+}
+
+/* 🌹 Popup glow animation */
+@keyframes popupOpen {
+  0% {transform: scale(0.8); opacity:0;}
+  100% {transform: scale(1); opacity:1;}
+}
+
+/* Heading Anime Font + Glow */
+.popup h2 {
+  margin-top: 0;
+  color: #ff4d6d;
+  font-size: 28px;
+  font-family: 'Bangers', cursive;
+  text-shadow:
+    0 0 5px #ff9a9e,
+    0 0 10px #ff9a9e,
+    0 0 15px #ff4d6d;
+}
+
+/* 🌹 Image Space */
+.image-space {
+  margin: 20px 0;
+  animation: imageOpen 0.8s ease forwards;
+}
+
+.image-space img {
+  width: 180px;
+  max-width: 100%;
+  height: auto;
+  border-radius: 15px;
+  transform: scale(0.8);
+  transition: transform 0.8s ease;
+}
+
+@keyframes imageOpen {
+  from {transform: scale(0.8);}
+  to {transform: scale(1);}
+}
+
+/* 💌 Message */
+.message {
+  font-size: 18px;
+  line-height: 1.6;
+  padding: 10px 20px;
+  font-family: 'Fredoka', sans-serif;
+}
+
+/* Close Button */
+.close-btn {
+  margin-top: 20px;
+  background: #ff4d6d;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 12px;
+  cursor: pointer;
+  font-size: 16px;
+  font-family: 'Fredoka', sans-serif;
+  transition: 0.3s;
+}
+
+.close-btn:hover {
+  background: #ff1e4d;
+}
+
+/* 💖 Petals inside popup only */
+.petal {
+  position: absolute;
+  font-size: 24px;
+  opacity: 0.8;
+  pointer-events: none;
+  animation: fall linear forwards;
+}
+
+@keyframes fall {
+  to {
+    transform: translateY(100vh) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+/* Fade in */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* 📱 Mobile Adjustments */
+@media (max-width: 600px) {
+
+  .letter-img {
+    width: 200px;
+  }
+
+  .popup {
+    padding: 20px;
+    border-radius: 20px;
+  }
+
+  .popup h2 {
+    font-size: 40px;
+  }
+
+  .message {
+    font-size: 16px;
+    padding: 5px 10px;
+  }
+
+  .image-space img {
+    height: 400px;
+    width: 380px;
+  }
+
+}
+</style>
+</head>
+
+<body>
+
+<div class="letter-emoji" onclick="openLetter()">
+  <img src="flower1.png" alt="Open Letter" class="letter-img">
+</div>
+
+<div class="popup" id="valentineLetter">
+  <h2>Happy Valentines Day 
+</h2>
+
+  <div class="image-space">
+    <img src="flower.png" alt="Flower">
+  </div>
+ <p style="color: orange;">Wrong Grammar Alert⚠️⚠️⚠️</p>
+    <br><br>
+  <div class="message">
+    <p style="text-align: left;">To: Heart <br><br></p>
+
+   
+
+    First i like to say Happy valentines day heart. i know how hard you've been ng dahil sakin. i've hurt you a lot. 
+    im so sorry sa mga nangyari. btw this message is not about drama HAHAHAHA. i like to thank you na minahal moko, i want to thankyou kasi
+    nag first move ka at inunblock moko at para maka usap ulit kita and thankyou for accepting me as your friend. dont worry po i've seen your note sa ig nong isang araw ata yun
+    you said there na you dont want to be attouch again, im just concern about you po. and i've said na hindi papoko naka move on so i care of you parin po.
+    i just want to remind the past using this opportunity. do you remember how you confess to me? naalala ko nun is myday yun e malalalim pa yung ibang part na word don 
+    but what i remember the most is yung naging confident ka para mag confess sakin and also imagine 7 years ka palang nag ka gusto sakin nun and that time kalang nag confess. 
+    i don't know what to say that time kasi nga nagulat ako HAHAHAH hindi ko alam kung anong sasabihin ko nun, but i take a risk for you and myself and for us. i give you all what i have and i dont have before
+    i know you know na may past rs ako and tumagal kami but not all what i have done to you is i done to her na, noo..... naalala mo rin ba yung first date natin nong december 23 ata or december 21 2025. Ni nenervous pako that time HAHHAHHAH
+    na cucutetan ako kung paano ka nag sisign sign sa bata kasi nga nasa harap natin yung bata nun tapos hawak hawak sya ng papa nya HAHAHHA.  after nun dina tayo mag kasama, kasama mo na si ate vane that time then nag pasyal ata kayo nun then ako kumakain mag isa sa mcdo
+    ah i know na kung san kayo pumunta don, kay papa mo nun kaya diako kasama HAHAHAHA. i remember how you smile that day, and pureeeeee, and that time din ako mas lalong gusto kang e pursue... naalala mo paba yung first kiss? i remember how nervous you are that time, naalala ko pa kung paano ka ma excite AHHAHAHAHAH ang cute cute mo nun...
+    i remember those kisses.... naalala ko rin how madly inlove you are/us... ang sarap sa feeling na mag karoon ng isang tulad mo. i love how genuine you are, napaka buti mong ate. you have a puriest heart i've ever meet.. wait may naalala ako bago ko e end tong message HAHAHHA. nalaalala ko yung flower na bibigay ko sana sayo kaso ang dugyot ng gawa ko AHAHHAHHAHHAHHAHAH, diko naman dapat itatapon yun kaso gusto ko talaga is maayos yung flower.
+    naalala ko yung mga bigay mo sakin and still here. ready nako ulit basahin yun... you are the greatest!. happy valentines po ulit and thankyou for accepting me again. sorry sa mga wrong grammar HAHAHAHA i tried my best. i still learning english pa HAHAHAHA.
+    <br><br>
+    <p style="text-align: left;">From: lloyd</p>
+  </div>
+
+  <button class="close-btn" onclick="closeLetter()">Close</button>
+</div>
+
+<!-- 🎵 Background Music -->
+<audio id="bgMusic" loop>
+  <source src="romantic.mp3" type="audio/mpeg">
+</audio>
+
+<script>
+function openLetter() {
+  const popup = document.getElementById("valentineLetter");
+  popup.style.display = "block";
+
+  // start petals inside popup
+  startPetals(popup);
+
+  // Play romantic music
+  const music = document.getElementById("bgMusic");
+  music.play().catch(e => console.log("Music play blocked by browser:", e));
+}
+
+function closeLetter() {
+  const popup = document.getElementById("valentineLetter");
+  popup.style.display = "none";
+}
+
+// 🌹 Petals inside popup only
+function startPetals(container) {
+  setInterval(() => {
+    const petal = document.createElement("div");
+    petal.classList.add("petal");
+
+    const roses = ["🌹", "🥀"];
+    petal.innerHTML = roses[Math.floor(Math.random()*roses.length)];
+
+    petal.style.left = Math.random() * container.offsetWidth + "px";
+    petal.style.top = "0px";
+    petal.style.animationDuration = (Math.random() * 3 + 4) + "s";
+    petal.style.fontSize = (Math.random() * 15 + 18) + "px";
+
+    container.appendChild(petal);
+
+    setTimeout(() => { petal.remove(); }, 7000);
+  }, 300);
+}
+</script>
+
+</body>
+</html>
